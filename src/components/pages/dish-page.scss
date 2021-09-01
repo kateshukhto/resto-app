@@ -1,0 +1,38 @@
+.dish {
+  &__wrapper {
+    height: 100vh;
+
+  }
+  &__item {
+      margin: 100px auto;
+      display: flex;
+      justify-content: center;
+      background-color: #eeee;
+      border-radius: 5px;
+      box-shadow: 7px 0px 15px 2px #C7C7C7;
+      width: 70vw;
+  }
+  &__content {
+    margin: 20px;
+    align-self: center;
+  }
+  &__title {
+      color: #333;
+      font-size: 25px;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+  &__img {
+    height: 40%;
+    max-width: 40%;
+    margin: 20px;
+    object-fit: cover;
+  }
+  &__descr {
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+}

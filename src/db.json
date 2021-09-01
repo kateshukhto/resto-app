@@ -1,0 +1,112 @@
+{
+	"menu": [
+		{
+			"title": "Cesar salad",
+			"price": 12,
+			"url": "https://static.1000.menu/img/content/21458/-salat-cezar-s-kr-salat-cezar-s-krevetkami-s-maionezom_1501173720_1_max.jpg",
+			"category": "salads",
+			"description": "A Caesar salad is a green salad of romaine lettuce and croutons dressed with lemon juice, olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon mustard, Parmesan cheese, and black pepper.",
+			"amount": "1",
+			"id": 1
+		},
+		{
+			"title": "Pizza Margherita",
+			"price": 10,
+			"url": "https://onlineculinaryschool.net/wp-content/uploads/2018/10/online_culinary_school_pizza_margherita-1.jpg",
+			"category": "pizza",
+			"description": "Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil.",
+			"amount": "1",
+			"id": 2
+		},
+		{
+			"title": "Pizza Pepperoni",
+			"price": 13,
+			"url": "https://www.womanscribbles.net/wp-content/uploads/2020/01/pepperoni-pizza-one-720x720.jpg",
+			"category": "pizza",
+			"description": "Pepperoni is an American variety of salami, made from cured pork and beef seasoned with paprika or other chili pepper. Pepperoni is characteristically soft, slightly smoky, and bright red in color.",
+			"amount": "1",
+			"id": 3
+		},
+		{
+			"title": "Greece salad",
+			"price": 8,
+			"url": "https://assets.epicurious.com/photos/576454fb42e4a5ed66d1df6b/master/pass/greek-salad.jpg",
+			"category": "salads", 
+			"description": "Greek salad or horiatiki salad is a popular salad in Greek cuisine generally made with pieces of tomatoes, cucumbers, onion, feta cheese, and olives and dressed with salt, pepper, Greek oregano, and olive oil.",
+			"amount": "1",
+			"id": 4
+		},
+		{
+			"title": "Cowboy Steak",
+			"price": 25,
+			"url": "https://i.cbc.ca/1.4491288.1516208229!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/cowboysteak.jpg",
+			"category": "meat",
+			"description": "A steak is a meat generally sliced across the muscle fibers, potentially including a bone. It is normally grilled, though can also be pan-fried.",
+			"amount": "1",
+			"id": 5
+		},
+		{
+			"title": "Lasagne",
+			"price": "15",
+			"url": "https://860wacb.com/wp-content/uploads/Lasagna.jpg",
+			"category": "main course",
+			"description": "Lasagne are a type of wide, flat pasta, possibly one of the oldest types of pasta. Lasagne, or the singular lasagna, is an Italian dish made of stacked layers of thin flat pasta alternating with fillings such as ragù and other vegetables, cheese, and seasonings and spices such as garlic, oregano and basil.",
+			"amount": "1",
+			"id": 6
+		},
+		{
+			"title": "Beef burger",
+			"price": "10",
+			"url": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmVlZiUyMGJ1cmdlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+			"category": "burger",
+			"description": "A hamburger is a food, typically considered a sandwich, consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.",
+			"amount": "1",
+			"id": 7		
+		},
+		{
+			"title": "Risotto",
+			"price": "12",
+			"url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-191112-risotto-rice-0151-landscape-pf-1574723947.jpg",
+			"category": "main course",
+			"description": "Risotto is a northern Italian rice dish cooked with broth until it reaches a creamy consistency. The broth can be derived from meat, fish, or vegetables. Many types of risotto contain butter, onion, white wine, and parmesan cheese.",
+			"amount": "1",
+			"id": 8
+		},
+		{
+			"title": "Tiramisu",
+			"price": "9",
+			"url": "https://www.mybakingaddiction.com/wp-content/uploads/2021/01/plated-tiramisu-720x720.jpg",
+			"category": "dessert",
+			"description": "Tiramisu is a coffee-flavoured Italian dessert. It is made of ladyfingers dipped in coffee, layered with a whipped mixture of eggs, sugar, and mascarpone cheese, flavoured with cocoa.",
+			"amount": "1",
+			"id": 9
+		},
+		{
+			"title": "Cheesecake",
+			"price": "11",
+			"url": "https://www.texanerin.com/content/uploads/2020/12/eggless-cheesecake-fb-1.jpg",
+			"category": "dessert",
+			"description": "Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese, eggs, and sugar. If there is a bottom layer, it most often consists of a crust or base made from crushed cookies, graham crackers, pastry, or sometimes sponge cake.",
+			"amount": "1",
+			"id": 10
+		},
+		{
+			"title": "Pasteis de nata",
+			"url": "https://www.livingtours.com/public/blog/posts/20200123161347-reQkxvU6.jpg",
+			"price": "5",
+			"category": "dessert",
+			"description": "This pastéis de nata recipe makes as-close-to-authentic Portuguese custard tarts with a rich egg custard nestled in shatteringly crisp pastry.",
+			"amount": "1",
+			"id": 11
+		}, 
+		{
+			"title": "Cinnamon rolls",
+			"url": "https://www.alsothecrumbsplease.com/wp-content/uploads/2020/10/Cinnamon-Rolls-3.jpg",
+			"price": "7",
+			"category": "dessert",
+			"description": "A cinnamon roll is a sweet roll commonly served in Northern Europe and North America.",
+			"amount": "1",
+			"id": 12
+		}
+	]
+}
