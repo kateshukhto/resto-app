@@ -1,8 +1,11 @@
 const initialState = {
   menu: [],
+  categories: [],
   loading: true,
   error: false,
-  items: []
+  items: [], 
+  totalPrice: 0,
+  isActive: false
 }
 
 const reducers = (state = initialState, action) => {
@@ -14,6 +17,23 @@ const reducers = (state = initialState, action) => {
           loading: false,
           error: false
       };
+
+    case 'GET_CATEGORIES': {
+      return {
+        ...state,
+        categories: state.menu.map(i => {
+          return {
+            category: i.category,
+            img: i.img
+          }
+        }).filter((el, index, self) =>
+        index === self.findIndex((t) => (
+          t.category === el.category && t.img === el.img
+        ))
+      )
+      }
+    };
+
     case 'MENU_REQUESTED':
       return {
           ...state,
@@ -28,6 +48,7 @@ const reducers = (state = initialState, action) => {
             loading: true,
             error: true
         };
+
     case 'ITEM_ADD_TO_CART':
       const id = action.payload;
       const reapeatItems = state.items.findIndex(item => item.id === id);
@@ -60,9 +81,11 @@ const reducers = (state = initialState, action) => {
           newItem
         ]
       }
+      
     case 'DELETE_FROM_CART':
       const ind = action.id;
       const itemIndex = state.items.findIndex(item => item.id === ind);
+
 
       return {
         ...state,
@@ -72,6 +95,62 @@ const reducers = (state = initialState, action) => {
         ]
       }
 
+    case 'GET_TOTAL_PRICE':
+
+    return {
+      ...state,
+      totalPrice: state.items.length === 0 ? 0 : state.items.map(i => i.price * i.amount).reduce((a, b) => a + b)
+    }
+
+    case 'TOGGLE_ACTIVE': 
+    return {
+      ...state,
+      isActive: action.isActive
+    }
+
+    case 'INC__AMOUNT': 
+
+    const CInd = state.items.findIndex(i => i.id === action.id)
+    const CItem = state.items.find(i => i.id === action.id);
+    const changeItem = {
+      ...CItem, 
+      amount: ++CItem.amount,
+    }
+
+    return {
+      ...state,
+      items: [
+        ...state.items.slice(0, CInd),
+        changeItem,
+        ...state.items.slice(CInd + 1)
+      ]
+    }
+
+    case 'DCR__AMOUNT': 
+
+    function isPositive(n){
+      if(n > 0) {
+        return --n
+      } else {
+        return 0
+      }
+    }
+
+    const DInd = state.items.findIndex(i => i.id === action.id)
+    const DItem = state.items.find(i => i.id === action.id);
+    const DchangeItem = {
+      ...DItem, 
+      amount: isPositive(DItem.amount) 
+    }
+
+    return {
+      ...state,
+      items: [
+        ...state.items.slice(0, DInd),
+        DchangeItem,
+        ...state.items.slice(DInd + 1)
+      ]
+    }
 
     default:
       return state;

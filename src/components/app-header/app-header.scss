@@ -1,12 +1,15 @@
-.header {
+.nav {
     background-color: rgba(0,0,0, .5);
     height: 60px;
+    width: 100%;
+    padding: 0 25px;
+    margin-bottom:50px ;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    position: fixed;
+    z-index: 50;
     &__link {
-        display: flex;
         margin-right: 40px;
         font-size: 18px;
         color: #fff;
@@ -16,4 +19,60 @@
         width: 20px;
         margin-right: 10px;
     }
+
 }
+
+.burger-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  & span {
+    position: absolute;
+    top: 14px;
+    background-color: #fff;
+    height: 2px;
+    width: 30px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    height: 2px;
+    width: 30px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    height: 2px;
+    width: 30px;
+  }
+}
+
+.burger-btn.active{
+  transform: rotate(45deg);
+
+  & span {
+    display: none;
+  }
+
+  &:before, &:after {
+    left: 15px;
+    content: ' ';
+    height: 30px;
+    width: 2px;
+  }
+
+  &:before {
+    transform: rotate(90deg);
+  }
+}
+
+

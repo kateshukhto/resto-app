@@ -28,13 +28,19 @@
             font-size: 24px;
         }
         &-img {
+            display: block;
             height: 125px;
             width: 250px;
             object-fit: cover;
         }
         &-amount {
             font-size: 25px;
+            margin: 10px;
             color: #fff;
+        }
+
+        &-btn {
+            display: flex;
         }
     }
     &__close {
@@ -51,6 +57,14 @@
         cursor: pointer;
     }
 
+    &__btn {
+        cursor: pointer;
+        font-size: 25px;
+        color: #fff;
+        border: none;
+        background-color: transparent;
+    }
+
 }
 
 .btn {
@@ -61,3 +75,6 @@
 .btn:nth-child(1) {
     margin-right: 5px;
 }
+
+
+

@@ -1,6 +1,7 @@
 .menu__list {
   min-height: 100vh;
   padding: 50px;
+  padding-top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -6,7 +6,7 @@ const MenuListItem = ({menuItem, onAddToCart}) => {
     const { title, price, url, category, id} = menuItem;
     return (
         <li className="menu__item">
-            <Link to={`/${id}`} className='menu__link'>
+            <Link to={`/dish/${id}`} className='menu__link'>
                 <div className="menu__title">{title}</div>
                 <img className="menu__img" src={url} alt={title}></img>
                 <div className="menu__category">Category: <span>{category}</span></div>

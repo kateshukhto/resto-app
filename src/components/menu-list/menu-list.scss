@@ -1,7 +1,8 @@
 .menu {
     &__list {
+        list-style: none;
         min-height: 100vh;
-        padding: 50px;
+        padding: 120px 50px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;

@@ -29,11 +29,48 @@ const deleteFromCart = (id) => {
   }
 }
 
+const getTotalPrice = () => { 
+  return {
+    type: 'GET_TOTAL_PRICE'
+  }
+}
+
+const getCategories = () => {
+  return {
+    type: 'GET_CATEGORIES'
+  }
+}
+
+const toggleActive = (isActive) => {
+  return {
+    type: 'TOGGLE_ACTIVE',
+    isActive
+  }
+}
+
+const incAmount = (id) => {
+  return {
+    type: "INC__AMOUNT",
+    id
+  }
+}
+
+const dcrAmount = (id) => {
+  return {
+    type: 'DCR__AMOUNT',
+    id
+  }
+}
 
 export {
   menuLoaded,
   menuRequested,
   menuError,
   addedToCart,
-  deleteFromCart
+  deleteFromCart, 
+  getTotalPrice,
+  getCategories,
+  toggleActive, 
+  incAmount, 
+  dcrAmount
 }

@@ -3,7 +3,7 @@
 }
 
 .dish__item {
-  margin: 100px auto;
+  padding: 120px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

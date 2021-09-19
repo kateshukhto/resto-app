@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import WithRestoService from '../hoc';
-import { menuLoaded, menuRequested, addedToCart, menuError } from '../../actions';
+import { menuLoaded, menuRequested, addedToCart, menuError, getTotalPrice } from '../../actions';
 import Spinner from '../spinner';
 import Error from '../error/error';
 import { withRouter } from 'react-router-dom';
 
 import './dish-page.scss'
-
 
 class DishPage extends Component {
     componentDidMount() {
@@ -16,9 +15,10 @@ class DishPage extends Component {
         .then(res => this.props.menuLoaded(res))
         .catch(error => this.props.menuError())
     }
+    
 
     render() {
-        const {menuItems, loading, error, addedToCart} = this.props;
+        const {menuItems, loading, error, addedToCart, getTotalPrice} = this.props;
         const ItemId = this.props.match.params.id;
         const item = menuItems.find(item => +item.id === +ItemId);
 
@@ -42,7 +42,10 @@ class DishPage extends Component {
                     <div className="menu__category">Category: <span>{category}</span></div>
                     <div className="menu__price">Price: <span>{price}$</span></div>
                     <div className='dish__descr'>{description}</div>
-                    <button onClick={() => addedToCart(id)} className="menu__btn">Add to cart</button>  
+                    <button onClick={() => {
+                        addedToCart(id)
+                        getTotalPrice()
+                    }} className="menu__btn">Add to cart</button>  
                 </div>
                 </div>
             </div>
@@ -62,9 +65,9 @@ const mapDispacthToProps = {
     menuLoaded,
     menuRequested, 
     addedToCart, 
-    menuError
+    menuError, 
+    getTotalPrice
 }
 
-const DishPageWithData = withRouter(DishPage);
 
-export default WithRestoService()(connect(mapStateToProps, mapDispacthToProps)(DishPageWithData));
+export default withRouter(WithRestoService()(connect(mapStateToProps, mapDispacthToProps)(DishPage)));
