@@ -1,4 +1,4 @@
 [buil]
-  base = "dist"
-  command = "yarn build"
-  publish = "dist/resto-app"
+  base = "/"
+  command = "/"
+  publish = ""
