@@ -1,0 +1,4 @@
+[buil]
+  base = "dist"
+  command = "npm run buil"
+  publish = "dist/restoo-app"
