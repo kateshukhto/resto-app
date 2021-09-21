@@ -1,4 +1,4 @@
 [buil]
   base = "dist"
-  command = "npm run buil"
+  command = "yarn build"
   publish = "dist/restoo-app"
