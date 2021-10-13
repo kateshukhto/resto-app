@@ -5,7 +5,10 @@ const initialState = {
   error: false,
   items: [], 
   totalPrice: 0,
-  isActive: false
+  isActive: false,
+  isOpenModal: false,
+  isOrdered: null,
+  isLoading: false
 }
 
 const reducers = (state = initialState, action) => {
@@ -71,7 +74,8 @@ const reducers = (state = initialState, action) => {
         url: item.url,
         price: item.price,
         amount: item.amount,
-        id: item.id
+        id: item.id,
+        total: item.total
       };
 
       return {
@@ -150,6 +154,44 @@ const reducers = (state = initialState, action) => {
         DchangeItem,
         ...state.items.slice(DInd + 1)
       ]
+    }
+
+    case 'GET__PRICE__OF__CERTAIN__ITEM': {
+
+      const ind = state.items.findIndex(i => i.id === action.id)
+      const item = state.items.find(i => i.id === action.id);
+      const changeItem = {
+        ...item, 
+        total: item.amount * item.price
+      }
+  
+      return {
+        ...state,
+        items: [
+          ...state.items.slice(0, ind),
+          changeItem,
+          ...state.items.slice(ind + 1)
+        ]
+      }
+    }
+
+    case 'SET__MODAL': 
+    return {
+      ...state,
+      isOpenModal: action.isOpenModal
+    }
+
+    case 'SET__ORDERED': 
+    return {
+      ...state,
+      items: [],
+      isOrdered: action.isOrdered
+    }
+
+    case 'SET__LOADING': 
+    return {
+      ...state,
+      isLoading: action.isLoading
     }
 
     default:

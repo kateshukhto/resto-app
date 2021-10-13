@@ -21,6 +21,13 @@
         border: 1px solid rgba(256,256,256, .2);
         background-color: rgba(0,0,0,.7);
         box-shadow: 0 0 20px rgba(256,256,256, .1);
+        &-w {
+            padding-top: 5px;
+            color: #eeee;
+            display: block;
+            font-size: 16px;
+            font-weight: 300;
+        }
         &-title, &-price  {
             width: 250px;
             text-align: center;
@@ -74,6 +81,15 @@
 
 .btn:nth-child(1) {
     margin-right: 5px;
+}
+
+.order__btn {
+    display: block;
+    margin: 50px auto;
+    height: 60px;
+    width: 250px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 

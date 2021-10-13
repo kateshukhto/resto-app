@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './menu-list-item.scss';
 
 const MenuListItem = ({menuItem, onAddToCart}) => {
-    const { title, price, url, category, id} = menuItem;
+    const { title, price, url, category, id } = menuItem;
     return (
         <li className="menu__item">
             <Link to={`/dish/${id}`} className='menu__link'>

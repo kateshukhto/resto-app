@@ -18,6 +18,7 @@ class DishPage extends Component {
     
 
     render() {
+
         const {menuItems, loading, error, addedToCart, getTotalPrice} = this.props;
         const ItemId = this.props.match.params.id;
         const item = menuItems.find(item => +item.id === +ItemId);
@@ -47,6 +48,10 @@ class DishPage extends Component {
                         getTotalPrice()
                     }} className="menu__btn">Add to cart</button>  
                 </div>
+                    <div 
+                    onClick={() => {this.props.history.goBack()}}
+                    className className='dish__close'
+                    >&times;</div>
                 </div>
             </div>
         )

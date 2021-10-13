@@ -62,6 +62,35 @@ const dcrAmount = (id) => {
   }
 }
 
+const getPriceOCertainItem = (id) => {
+  return {
+    type: 'GET__PRICE__OF__CERTAIN__ITEM',
+    id
+  }
+}
+
+const setModal = (isOpenModal) => {
+  return {
+    type: 'SET__MODAL',
+    isOpenModal
+  }
+}
+
+const setOrdered = (isOrdered) => {
+  return {
+    type: 'SET__ORDERED',
+    isOrdered
+  }
+}
+
+const setLoading = (isLoading) => {
+  return {
+    type: 'SET__LOADING',
+    isLoading
+  }
+}
+
+
 export {
   menuLoaded,
   menuRequested,
@@ -72,5 +101,9 @@ export {
   getCategories,
   toggleActive, 
   incAmount, 
-  dcrAmount
+  dcrAmount,
+  getPriceOCertainItem,
+  setModal,
+  setOrdered,
+  setLoading
 }

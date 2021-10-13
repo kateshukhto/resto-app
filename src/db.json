@@ -8,7 +8,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/3831/3831114.png",
 			"description": "A Caesar salad is a green salad of romaine lettuce and croutons dressed with lemon juice, olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon mustard, Parmesan cheese, and black pepper.",
 			"amount": "1",
-			"id": 1
+			"id": 1,
+			"total": 12
 		},
 		{
 			"title": "Pizza Margherita",
@@ -18,7 +19,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/2982/2982880.png",
 			"description": "Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil.",
 			"amount": "1",
-			"id": 2
+			"id": 2,
+			"total": 10
 		},
 		{
 			"title": "Pizza Pepperoni",
@@ -28,7 +30,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/2982/2982880.png",
 			"description": "Pepperoni is an American variety of salami, made from cured pork and beef seasoned with paprika or other chili pepper. Pepperoni is characteristically soft, slightly smoky, and bright red in color.",
 			"amount": "1",
-			"id": 3
+			"id": 3,
+			"total": 13
 		},
 		{
 			"title": "Greece salad",
@@ -38,7 +41,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/3831/3831114.png",
 			"description": "Greek salad or horiatiki salad is a popular salad in Greek cuisine generally made with pieces of tomatoes, cucumbers, onion, feta cheese, and olives and dressed with salt, pepper, Greek oregano, and olive oil.",
 			"amount": "1",
-			"id": 4
+			"id": 4,
+			"total": 8
 		},
 		{
 			"title": "Cowboy Steak",
@@ -48,7 +52,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/3076/3076067.png",
 			"description": "A steak is a meat generally sliced across the muscle fibers, potentially including a bone. It is normally grilled, though can also be pan-fried.",
 			"amount": "1",
-			"id": 5
+			"id": 5,
+			"total": 25
 		},
 		{
 			"title": "Lasagne",
@@ -58,7 +63,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/857/857681.png",
 			"description": "Lasagne are a type of wide, flat pasta, possibly one of the oldest types of pasta. Lasagne, or the singular lasagna, is an Italian dish made of stacked layers of thin flat pasta alternating with fillings such as ragù and other vegetables, cheese, and seasonings and spices such as garlic, oregano and basil.",
 			"amount": "1",
-			"id": 6
+			"id": 6,
+			"total": 15
 		},
 		{
 			"title": "Beef burger",
@@ -68,7 +74,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/1161/1161695.png",
 			"description": "A hamburger is a food, typically considered a sandwich, consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.",
 			"amount": "1",
-			"id": 7		
+			"id": 7,
+			"total": 10		
 		},
 		{
 			"title": "Risotto",
@@ -78,7 +85,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/857/857681.png",
 			"description": "Risotto is a northern Italian rice dish cooked with broth until it reaches a creamy consistency. The broth can be derived from meat, fish, or vegetables. Many types of risotto contain butter, onion, white wine, and parmesan cheese.",
 			"amount": "1",
-			"id": 8
+			"id": 8,
+			"total": 12
 		},
 		{
 			"title": "Tiramisu",
@@ -88,7 +96,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/2965/2965574.png",
 			"description": "Tiramisu is a coffee-flavoured Italian dessert. It is made of ladyfingers dipped in coffee, layered with a whipped mixture of eggs, sugar, and mascarpone cheese, flavoured with cocoa.",
 			"amount": "1",
-			"id": 9
+			"id": 9,
+			"total": 9
 		},
 		{
 			"title": "Cheesecake",
@@ -98,7 +107,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/2965/2965574.png",
 			"description": "Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese, eggs, and sugar. If there is a bottom layer, it most often consists of a crust or base made from crushed cookies, graham crackers, pastry, or sometimes sponge cake.",
 			"amount": "1",
-			"id": 10
+			"id": 10,
+			"total": 11
 		},
 		{
 			"title": "Pasteis de nata",
@@ -108,7 +118,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/2965/2965574.png",
 			"description": "This pastéis de nata recipe makes as-close-to-authentic Portuguese custard tarts with a rich egg custard nestled in shatteringly crisp pastry.",
 			"amount": "1",
-			"id": 11
+			"id": 11,
+			"total": 5
 		}, 
 		{
 			"title": "Cinnamon rolls",
@@ -118,7 +129,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/2965/2965574.png",
 			"description": "A cinnamon roll is a sweet roll commonly served in Northern Europe and North America.",
 			"amount": "1",
-			"id": 12
+			"id": 12,
+			"total": 7
 		},
 		{ "title": "BLT Pasta Salad",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/08/blt-pasta-salad-recipe.jpg",
@@ -127,7 +139,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/3823/3823071.png",
 			"description": "This BLT pasta salad recipe is a fun twist on the classic sandwich. Packed with fresh veggies and avocado, it's a flavorful side dish or light lunch.",
 			"amount": "1",
-			"id": 13
+			"id": 13,
+			"total": 8
 		},
 		{ "title": "Cherry Tomato Pasta",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/07/cherry-tomato-pasta-1.jpg",
@@ -136,7 +149,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/3823/3823071.png",
 			"description": "This cherry tomato pasta is my ideal summer dinner. Filled with bursty tomatoes, garlic, and basil, it's fresh, flavorful, and super easy to make!",
 			"amount": "1",
-			"id": 14
+			"id": 14,
+			"total": 9
 		},
 		{ "title": "Pesto Pasta Salad",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/07/pesto-pasta-salad-1-1.jpg",
@@ -145,7 +159,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/3823/3823071.png",
 			"description": "Tossed with a vibrant basil pesto and filled with veggies, this pesto pasta salad is fresh and delicious. Serve it for dinner, or pack it up for a picnic!",
 			"amount": "1",
-			"id": 15
+			"id": 15,
+			"total": 9
 		},
 		{ "title": "Air Fryer Eggplant",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/08/air-fryer-eggplant-1.jpg",
@@ -154,7 +169,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/3823/3823071.png",
 			"description": "Coated in a panko and Parmesan crust, this air fryer eggplant is crispy on the outside, tender in the middle, and packed with rich, nutty flavor.",
 			"amount": "1",
-			"id": 16
+			"id": 16,
+			"total": 10
 		},
 		{ "title": "Orzo Salad",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/05/orzo-salad-1.jpg",
@@ -163,7 +179,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/3831/3831114.png",
 			"description": "This orzo salad recipe is perfect for summer picnics and cookouts! Feta cheese, olives, and a zingy Greek dressing fill it with bold flavor.",
 			"amount": "1",
-			"id": 17
+			"id": 17,
+			"total": 8
 		}, 		
 		{ "title": "Pumpkin Bars",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2018/10/pumpkin-bars-recipe.jpg",
@@ -172,7 +189,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/2965/2965574.png",
 			"description": "These easy pumpkin bars are super moist, perfectly spiced, and slathered in tangy cream cheese frosting.",
 			"amount": "1",
-			"id": 18
+			"id": 18,
+			"total": 7
 		},		
 		{ "title": "Apple Cake",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2020/10/apple-cake-4.jpg",
@@ -181,7 +199,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/2965/2965574.png",
 			"description": "This easy apple cake recipe is the perfect autumn treat! Moist, tender, and deliciously spiced, it's a wonderful dessert, breakfast, or afternoon snack.",
 			"amount": "1",
-			"id": 19
+			"id": 19,
+			"total": 9
 		},
 		{
 			"title": "Portobello Mushroom Burger",
@@ -191,7 +210,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/1161/1161695.png",
 			"description": "This portobello mushroom burger recipe will be a hit with vegetarians and meat eaters alike! It's juicy, meaty, and filled with rich, savory flavor.",
 			"amount": "1",
-			"id": 20	
+			"id": 20,
+			"total": 9
 		},
 		{
 			"title": "Cabbage Soup",
@@ -201,7 +221,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/857/857681.png",
 			"description": "This cabbage soup recipe is deeply flavorful, thanks to aromatic veggies and fire-roasted tomatoes. Pair it with good bread for a simple, nourishing meal.",
 			"amount": "1",
-			"id": 21
+			"id": 21,
+			"total": 11
 		},
 		{
 			"title": "Stuffed Peppers",
@@ -211,7 +232,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/857/857681.png",
 			"description": "This easy stuffed peppers recipe is destined for your regular rotation! It's super simple, but the zesty rice filling makes it bold, fresh, and flavorful.",
 			"amount": "1",
-			"id": 22
+			"id": 22,
+			"total": 9
 		}, 		
 		{
 			"title": "Ratatouille",
@@ -221,7 +243,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/857/857681.png",
 			"description": "Bright, flavorful, and flecked with herbs, this ratatouille recipe showcases summer produce at its best. Enjoy it with your favorite rosé and good bread!",
 			"amount": "1",
-			"id": 23
+			"id": 23,
+			"total": 10
 		}, 		
 		{
 			"title": "Cast Iron Skillet Pizza",
@@ -231,7 +254,8 @@
 			"img": "https://cdn-icons-png.flaticon.com/512/2982/2982880.png",
 			"description": "Try this cast iron pizza recipe once, and you'll never make pizza any other way! Thanks to the hot skillet, the crust is perfectly golden brown and crisp.",
 			"amount": "1",
-			"id": 24
+			"id": 24,
+			"total": 7
 		}
 		
 	]
