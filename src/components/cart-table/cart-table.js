@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './cart-table.scss';
 import { connect } from 'react-redux';
 import { deleteFromCart, getTotalPrice, incAmount, dcrAmount, getPriceOCertainItem } from '../../actions';
@@ -7,10 +7,6 @@ import { Link } from 'react-router-dom';
 const CartTable = (
     {items, deleteFromCart, getTotalPrice, 
     incAmount, dcrAmount, getPriceOCertainItem}) => {
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
 
     return (
         <>
