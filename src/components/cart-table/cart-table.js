@@ -1,13 +1,12 @@
 import React from 'react';
 import './cart-table.scss';
 import { connect } from 'react-redux';
-import { deleteFromCart, getTotalPrice, incAmount, dcrAmount, getPriceOCertainItem, setModal} from '../../actions';
-import Modal from '../modal/modal';
-import FormContainer from '../form/FormContainer';
+import { deleteFromCart, getTotalPrice, incAmount, dcrAmount, getPriceOCertainItem } from '../../actions';
+import { Link } from 'react-router-dom';
 
 const CartTable = (
     {items, deleteFromCart, getTotalPrice, 
-    incAmount, dcrAmount, getPriceOCertainItem, setModal, isLoading}) => {
+    incAmount, dcrAmount, getPriceOCertainItem}) => {
 
     return (
         <>
@@ -46,20 +45,19 @@ const CartTable = (
                     })
                 }
             </div>
-            {items.length < 1 ? null : <button 
-                className="menu__btn order__btn"
-                onClick={() => setModal(true)}>Order Now</button>}
-            <Modal>
-                <FormContainer/>
-            </Modal>
+            {items.length < 1 ? null : 
+                <Link
+                    to='/form' 
+                    className="menu__btn order__btn"
+                    >Order Now</Link>
+                    }
         </>
     );
 };
 
-const mapStateToProps = ({items, isLoading}) => {
+const mapStateToProps = ({items}) => {
     return {
         items,
-        isLoading
     }
 }
 
@@ -69,7 +67,6 @@ const mapDispacthToProps = {
     incAmount, 
     dcrAmount,
     getPriceOCertainItem, 
-    setModal
 }
 
 export default connect(mapStateToProps, mapDispacthToProps)(CartTable);

@@ -1,12 +1,10 @@
 import React from "react";
-import './spinner.css'
+import Ball from './Ball.svg';
 
 const Spinner = () => {
   return (
-    <div className="spinner">
-      <div className="lds-dual-ring"></div>
-    </div>
-  );
-};
+    <img style={{margin: '0 auto', display: 'block', padding: '120px 0'}} src={Ball} alt='spinner'/>
+  )
+}
 
 export default Spinner;

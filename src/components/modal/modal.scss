@@ -1,5 +1,4 @@
 .modal {
-  padding-top: 260px;
   height: 100%;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
@@ -11,14 +10,13 @@
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  overflow: scroll;
 
   &__content{
     position: relative;
     padding: 50px;
     background-color: #fff;
     border-radius: 5px;
-    width: 50vw;
+    width: 60vw;
     transition: 0.4s all;
   }
 
@@ -44,5 +42,13 @@
 .modal.active {
   opacity: 1;
   pointer-events: all;
+}
+
+@media screen and (max-width: 776px){
+  .modal {
+    &__content {
+      width: 80vw
+    }
+  }
 }
 

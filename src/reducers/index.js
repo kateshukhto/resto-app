@@ -5,10 +5,8 @@ const initialState = {
   error: false,
   items: [], 
   totalPrice: 0,
-  isActive: false,
   isOpenModal: false,
-  isOrdered: null,
-  isLoading: false
+  isOrdered: null
 }
 
 const reducers = (state = initialState, action) => {
@@ -106,12 +104,6 @@ const reducers = (state = initialState, action) => {
       totalPrice: state.items.length === 0 ? 0 : state.items.map(i => i.price * i.amount).reduce((a, b) => a + b)
     }
 
-    case 'TOGGLE_ACTIVE': 
-    return {
-      ...state,
-      isActive: action.isActive
-    }
-
     case 'INC__AMOUNT': 
 
     const CInd = state.items.findIndex(i => i.id === action.id)
@@ -185,13 +177,15 @@ const reducers = (state = initialState, action) => {
     return {
       ...state,
       items: [],
-      isOrdered: action.isOrdered
+      loading: false,
+      isOrdered: action.isOrdered,
+      totalPrice: 0
     }
 
     case 'SET__LOADING': 
     return {
       ...state,
-      isLoading: action.isLoading
+      loading: action.loading
     }
 
     default:

@@ -1,21 +1,23 @@
 .dish {
   &__wrapper {
     height: 100vh;
-    padding: 120px 50px;
   }
   &__item {
+      display: flex;
+      flex-direction: column;
       position: relative;
       color: #ffff;
       display: flex;
-      margin: 50px auto;
+      margin: 0 auto;
       padding: 20px;
       justify-content: center;
       border: 1px solid rgba(256,256,256, .2);
       background-color: rgba(0,0,0,.7);
       box-shadow: 0 0 20px rgba(256,256,256, .1);
       border-radius: 5px;
-      width: 70vw;
+      width: 50vw;
   }
+
   &__content {
     margin: 20px;
     align-self: center;
@@ -26,10 +28,11 @@
     text-align: center;
   }
   &__img {
-    height: 400px;
-    max-width: 40%;
-    margin: 20px;
+    width: 100%;
+    max-width: 400px;
+    height: 35vh;
     object-fit: cover;
+    margin: 0 auto;
   }
   &__descr {
     font-size: 18px;
@@ -50,4 +53,12 @@
     border: 1px solid #ffff;
     cursor: pointer;
 }
+}
+
+@media screen and (max-width: 776px) {
+  .dish {
+    &__item{
+      width: 90vw;
+    }
+  }
 }

@@ -41,13 +41,6 @@ const getCategories = () => {
   }
 }
 
-const toggleActive = (isActive) => {
-  return {
-    type: 'TOGGLE_ACTIVE',
-    isActive
-  }
-}
-
 const incAmount = (id) => {
   return {
     type: "INC__AMOUNT",
@@ -83,10 +76,10 @@ const setOrdered = (isOrdered) => {
   }
 }
 
-const setLoading = (isLoading) => {
+const setLoading = (loading) => {
   return {
     type: 'SET__LOADING',
-    isLoading
+    loading
   }
 }
 
@@ -99,7 +92,6 @@ export {
   deleteFromCart, 
   getTotalPrice,
   getCategories,
-  toggleActive, 
   incAmount, 
   dcrAmount,
   getPriceOCertainItem,

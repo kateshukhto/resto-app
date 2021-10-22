@@ -3,15 +3,13 @@ import cartIcon from './shopping-cart-solid.svg';
 import './app-header.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { toggleActive } from '../../actions';
+import MenuBurger from '../menu-burger/menu-burger';
 
-const AppHeader = ({totalPrice, isActive, toggleActive}) => {
+const AppHeader = ({totalPrice}) => {
 
     return (
         <nav className="nav">
-            <div className={isActive ? 'burger-btn active' : 'burger-btn'} onClick={() => toggleActive(!isActive)}>
-                <span/>
-            </div>
+        <MenuBurger/>
 
             <div className='link-wrapper'>
                 <Link to='/' className="nav__link" href="#">
@@ -26,11 +24,10 @@ const AppHeader = ({totalPrice, isActive, toggleActive}) => {
     )
 };
 
-const mapStateToProps = ({totalPrice, isActive}) => {
+const mapStateToProps = ({totalPrice}) => {
     return {
         totalPrice, 
-        isActive
     }
 }
 
-export default connect(mapStateToProps, {toggleActive})(AppHeader);
+export default connect(mapStateToProps)(AppHeader);

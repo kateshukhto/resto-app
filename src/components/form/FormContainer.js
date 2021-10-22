@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import FormikControl from './FormControl';
+import FormikControl from '../form-elements/FormControl';
 import './form.scss';
 import emailjs from 'emailjs-com';
 import {connect} from 'react-redux';
 import {setOrdered, setLoading, setModal} from '../../actions';
-import Loader from '../../assets/Loader';
+import Modal from '../modal/modal';
+import ModalInner from '../modal/modal-inner';
 
-const FormContainer = ({ setOrdered, totalPrice, setLoading, isLoading, setModal}) => {
+const FormContainer = ({ totalPrice, setModal, setLoading, setOrdered }) => {
+  const checkboxOptions = [
+    {key: 'I give my consent to the processing of the above personal data', value: 'agreement'}
+  ]
+
   const radioOptions = [
     { key: 'Minsk', value: 'Minsk' },
     { key: 'Moscow', value: 'Moscow' },
-  ];
-
-  const checkboxOptions = [
-    {key: 'I give my consent to the processing of personal data', value: 'agreement'}
   ]
+
+ useEffect(() => {
+
+  return () => {
+    setOrdered(null)
+  }
+ }, [])
 
   const initialValues= {
     name: '',
@@ -29,49 +37,50 @@ const FormContainer = ({ setOrdered, totalPrice, setLoading, isLoading, setModal
     price: totalPrice
   };
 
-  const validationSchema = Yup.object({
-    name: Yup.string()
-      .min(3, 'Must be at least 3 characters')
-      .required('Required'),
-    email: Yup.string()
-      .email('Invalid email address')
-      .required('Required'),
-    phone: Yup.string()
-      .min(9, 'Must be at lest 9 characters')
-      .required('Required'),
-    sity: Yup.string().required('Choose your sity'),
-    address: Yup.string().required('Required'),
-    agreement: Yup.bool()
-      .oneOf([true], 'You must accept the conditions')
-  })
+  const validationSchema = Yup.object().shape(
+    {
+      name: Yup.string()
+        .min(3, 'Must be at least 3 characters')
+        .required('Required'),
+      email: Yup.string()
+        .email('Invalid email address')
+        .required('Required'),
+      phone: Yup.string()
+        .min(9, 'Must be at lest 9 characters')
+        .required('Required'),
+      sity: Yup.string().required('Choose your sity'),
+      address: Yup.string().required('Required'),
+      agreement: Yup.bool()
+        .oneOf([true], 'You must accept the conditions')
+    }
+  )
 
 
   function sendEmail(object) {
     emailjs.send('service_72acdwd', 'template_7pkuwso', 
     object, 'user_mWvy3foL57qSa8IZwXNAe')
-    .then(() => {
-      setLoading(false)
+    .then(() => { 
       setOrdered(true)
-      setModal(false)
     })
-    .then(() => alert('Your order is accepted! Check your email.'))
-    .catch(() => alert('Something went wrong. Try again.'))
+    .catch(() => {
+      setOrdered(false)
+    })
   }
 
-  
-
   return (
+    <>
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={(values, actions) => {
         setLoading(true)
+        setModal(true)
         sendEmail(values)
         actions.resetForm()
       }}
     >
       {
-        isLoading ? <Loader/> : () => (
+        () => (
           <Form className='form'>
             <h3 className='form__title'>Order registration</h3>
             <FormikControl
@@ -119,11 +128,16 @@ const FormContainer = ({ setOrdered, totalPrice, setLoading, isLoading, setModal
               name='agreement'
               options={checkboxOptions}
             />
-            <button type='submit' className='menu__btn form__btn'>Send</button>
+            <button type='submit' 
+              className='menu__btn form__btn'>Send</button>
           </Form>
         )
       } 
     </Formik>
+      <Modal>
+        <ModalInner/>
+      </Modal>
+    </>
   )
 }
 

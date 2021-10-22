@@ -24,22 +24,20 @@
     flex-direction: column;
   }
   &-wrap {
+    text-transform: uppercase;
     margin: 10px;
     list-style: none;
   }
 
   &-img {
-    align-items: center;
-    width: 30px;
     height: 30px;
     margin-right: 10px;
-
   }
 
   &-link {
     color: #333;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 500;
     margin-top: 20px;
     transition: all 0.2s ease;
@@ -54,11 +52,12 @@
   transform: translateX(0);
 }
 
+
 .blur {
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(2px);
-  position: absolute;
+  position: absolute; 
 }
 
 @media screen and (max-width: 768px){

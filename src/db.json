@@ -3,7 +3,7 @@
 		{
 			"title": "Cesar salad",
 			"price": 12,
-			"url": "https://static.1000.menu/img/content/21458/-salat-cezar-s-kr-salat-cezar-s-krevetkami-s-maionezom_1501173720_1_max.jpg",
+			"url": "https://natashaskitchen.com/wp-content/uploads/2019/01/Caesar-Salad-Recipe-3.jpg",
 			"category": "salads",
 			"img": "https://cdn-icons-png.flaticon.com/512/3831/3831114.png",
 			"description": "A Caesar salad is a green salad of romaine lettuce and croutons dressed with lemon juice, olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon mustard, Parmesan cheese, and black pepper.",
@@ -14,7 +14,7 @@
 		{
 			"title": "Pizza Margherita",
 			"price": 10,
-			"url": "https://onlineculinaryschool.net/wp-content/uploads/2018/10/online_culinary_school_pizza_margherita-1.jpg",
+			"url": "https://www.abeautifulplate.com/wp-content/uploads/2015/08/the-best-homemade-margherita-pizza-1-4.jpg",
 			"category": "pizza",
 			"img": "https://cdn-icons-png.flaticon.com/512/2982/2982880.png",
 			"description": "Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil.",
@@ -25,7 +25,7 @@
 		{
 			"title": "Pizza Pepperoni",
 			"price": 13,
-			"url": "https://www.womanscribbles.net/wp-content/uploads/2020/01/pepperoni-pizza-one-720x720.jpg",
+			"url": "https://static.onecms.io/wp-content/uploads/sites/19/2014/07/10/pepperoni-pizza-ck-x.jpg",
 			"category": "pizza",
 			"img": "https://cdn-icons-png.flaticon.com/512/2982/2982880.png",
 			"description": "Pepperoni is an American variety of salami, made from cured pork and beef seasoned with paprika or other chili pepper. Pepperoni is characteristically soft, slightly smoky, and bright red in color.",
@@ -256,8 +256,51 @@
 			"amount": "1",
 			"id": 24,
 			"total": 7
+		},
+		{
+			"title": "Salmon with Green Beans and Smashed Potatoes",
+			"price": 13,
+			"url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2019%2F03%2F01%2Fsalmon-with-green-beans-and-smashed-potatoes-1811-p46-2000.jpg",
+			"category": "main course",
+			"img": "https://cdn-icons-png.flaticon.com/512/857/857681.png",
+			"description": "Smart timing makes this sheet pan supper easy and keeps your dish count down. Briefly microwave the potatoes first to help them cook up perfectly tender with the salmon; add the green beans last to keep them bright and crunchy.",
+			"amount": "1",
+			"id": 25,
+			"total": 13
+		},
+		{
+			"title": "Sheet Pan Lemony Chicken With Potatoes and Kale",
+			"price": 10,
+			"url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2020%2F07%2F06%2FMR_Batch16_Julia_SheetPanChickenPotatoes26Kale_CT2028229-2000.jpg",
+			"category": "main course",
+			"img": "https://cdn-icons-png.flaticon.com/512/857/857681.png",
+			"description": "Try our Sheet Pan Lemony Chicken With Potatoes and Kale. Jarred sun-dried tomato pesto makes a great shortcut and adds loads of flavor without tacking on a ton of extra ingredients. The result is perfectly cooked chicken and potatoes and delicious kale with just the right amount of char. We used Stonewall Kitchen’s sun-dried tomato pesto, but feel free to use another brand. You can also rehydrate some dried tomatoes with warm water and olive oil, then run them through a mini food processor.",
+			"amount": "1",
+			"id": 26,
+			"total": 10
+		}, 
+		{
+			"title": "Roasted Squash Salad",
+			"price": 8,
+			"url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2015%2F10%2F07%2Froasted-squash-salad-hl.jpg",
+			"category": "salads", 
+			"img": "https://cdn-icons-png.flaticon.com/512/3831/3831114.png",
+			"description": "Top winter greens with roasted butternut squash for a clean, light meal.",
+			"amount": "1",
+			"id": 27,
+			"total": 8
+		}, 
+		{
+			"title": "Mexican Chorizo Burger",
+			"price": "6",
+			"url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2018%2F09%2F19%2F4088001_mexico-chorizo-burger-2000.jpg",
+			"category": "burger",
+			"img": "https://cdn-icons-png.flaticon.com/512/1161/1161695.png",
+			"description": "With a fiery burger (courtesy of fresh Mexican chorizo blended with ground beef sirloin) and Serrano chile salsa, fresh avocado slices, and crumbles of cotija cheese help cool things down. Like a salsa-capped chorizo burger, this light, Mexican-style lager demands to be savored on a hot summer day.",
+			"amount": "1",
+			"id": 28,
+			"total": 6		
 		}
-		
 	]
 }
 
