@@ -7,6 +7,7 @@ import ErrorBoundry from './components/error-boundry';
 import RestoServiceContext from './components/resto-service-context';
 import RestoService from './services/resto-service';
 import { BrowserRouter as Router } from 'react-router-dom';
+import ScrollToTop from './components/scroll-to-top/scroll-to-top';
 
 import './index.scss';
 
@@ -17,6 +18,7 @@ ReactDOM.render(
         <ErrorBoundry>
             <RestoServiceContext.Provider value={restoService}>
                 <Router>
+                    <ScrollToTop/>
                     <App/>
                 </Router>
             </RestoServiceContext.Provider>
