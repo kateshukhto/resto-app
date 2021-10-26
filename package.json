@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "14.17.x",
-    "npm": "7.24.x"
+    "node": "10.x",
+    "npm": "6.x"
   },
   "dependencies": {
     "@heroku/buildpack-registry": "^1.0.1",
