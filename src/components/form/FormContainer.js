@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
-import { Formik, Form } from 'formik';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
-import FormikControl from '../form-elements/FormControl';
-import './form.scss';
+import FormItem from './form';
 import emailjs from 'emailjs-com';
 import {connect} from 'react-redux';
 import {setOrdered, setLoading, setModal} from '../../actions';
 import Modal from '../modal/modal';
 import ModalInner from '../modal/modal-inner';
+import { withRouter } from 'react-router';
 
-const FormContainer = ({ totalPrice, setModal, setLoading, setOrdered }) => {
+const FormContainer = withRouter(({ history, ...props}) => {
+  const {totalPrice, setModal, setLoading, setOrdered } = props
+
   const checkboxOptions = [
     {key: 'I give my consent to the processing of the above personal data', value: 'agreement'}
   ]
@@ -20,9 +22,9 @@ const FormContainer = ({ totalPrice, setModal, setLoading, setOrdered }) => {
   ]
 
  useEffect(() => {
-
   return () => {
     setOrdered(null)
+    setModal(false)
   }
  }, [])
 
@@ -54,8 +56,6 @@ const FormContainer = ({ totalPrice, setModal, setLoading, setOrdered }) => {
         .oneOf([true], 'You must accept the conditions')
     }
   )
-
-
   function sendEmail(object) {
     emailjs.send('service_72acdwd', 'template_7pkuwso', 
     object, 'user_mWvy3foL57qSa8IZwXNAe')
@@ -64,6 +64,11 @@ const FormContainer = ({ totalPrice, setModal, setLoading, setOrdered }) => {
     })
     .catch(() => {
       setOrdered(false)
+    })
+    .finally(() => {
+      setTimeout(() => {
+        history.push('/')
+      }, 5000)
     })
   }
 
@@ -81,56 +86,7 @@ const FormContainer = ({ totalPrice, setModal, setLoading, setOrdered }) => {
     >
       {
         () => (
-          <Form className='form'>
-            <h3 className='form__title'>Order registration</h3>
-            <FormikControl
-              label='Name'
-              name='name'
-              control='input'
-              type='text'
-              placeholder='Enter your name'
-            />
-            <FormikControl
-              label='Email'
-              name='email'
-              control='input'
-              type='email'
-              placeholder='Enter your email'
-            />
-            <FormikControl
-              label='Phone'
-              name='phone'
-              control='input'
-              type='text'
-              placeholder='Enter your phone number'
-            />
-            <div className='form__container'>
-              <div className='form__label'>Address:</div>
-              <FormikControl
-                control='radio'
-                name='sity'
-                options={radioOptions}
-              />
-              <FormikControl
-                name='address'
-                control='input'
-                type='text'
-                placeholder='Enter your address'
-              />
-            </div>
-            <FormikControl
-              control='textarea'
-              label='Message'
-              name='message'
-            />
-            <FormikControl
-              control='checkbox'
-              name='agreement'
-              options={checkboxOptions}
-            />
-            <button type='submit' 
-              className='menu__btn form__btn'>Send</button>
-          </Form>
+          <FormItem checkboxOptions={checkboxOptions} radioOptions={radioOptions}/>
         )
       } 
     </Formik>
@@ -139,12 +95,11 @@ const FormContainer = ({ totalPrice, setModal, setLoading, setOrdered }) => {
       </Modal>
     </>
   )
-}
+})
 
-const mapStateToProps = ({totalPrice, isLoading}) => {
+const mapStateToProps = ({totalPrice}) => {
   return {
     totalPrice,
-    isLoading
   }
 }
 

@@ -1,72 +1,52 @@
-import React, {Component} from 'react';
+import React from 'react';
 import MenuListItem from '../menu-list-item';
 import { connect } from 'react-redux';
-import WithRestoService from '../hoc';
-import { menuLoaded, menuRequested, addedToCart, menuError, getTotalPrice, getCategories } from '../../actions';
+import { addedToCart, menuError, getTotalPrice, setDisable } from '../../actions';
 import Spinner from '../spinner';
 import Error from '../error/error';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 
 import './menu-list.scss';
 
-class MenuList extends Component {
-    componentDidMount() {
-        const {RestoService} = this.props;
-        RestoService.getMenuItems()
-        .then(res => this.props.menuLoaded(res))
-        .then(() => this.props.getCategories())
-        .catch(error => this.props.menuError())
+const  MenuList = withRouter(({match, ...props}) => { 
+    const category = match.params.i;
+
+    const {menu, loading, error, addedToCart, getTotalPrice, setDisable } = props;
+ 
+    const checkedItems = category ?  menu.filter(i => i.category === category) : menu;
+
+    if(error) {
+        return <Error/>
     }
 
-    render() {
-        const category = this.props.match.params.i;
+    if(loading){
+        return <Spinner/>
+    }
 
-        const {menuItems, loading, error, addedToCart, getTotalPrice} = this.props;
-
-        const checkedItems = category ?  menuItems.filter(i => i.category === category) : menuItems;
-
-        if(error) {
-            return <Error/>
-        }
-
-        if(loading){
-            return <Spinner/>
-        }
-
-        return (
-            <ul className="menu__list">
-                {
-                    checkedItems.map(menuItem => {
-                        return <MenuListItem 
-                                    key={menuItem.id} 
-                                    menuItem={menuItem}
-                                    onAddToCart={() => {
-                                        addedToCart(menuItem.id)
-                                        getTotalPrice()
-                                    }}/>
+    return (
+        <ul className="menu__list">
+            {
+                checkedItems.map(menuItem => {
+                    return <MenuListItem 
+                                key={menuItem.id} 
+                                menuItem={menuItem}
+                                onAddToCart={() => {
+                                    addedToCart(menuItem.id)
+                                    getTotalPrice()
+                                    setDisable(menuItem.id, true)
+                                }}/>
                     })
-                }
-            </ul>
-        )
-    }
-};
+            }
+        </ul>
+    )   
+});
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({menu, loading, error}) => {
     return {
-        menuItems: state.menu,
-        loading: state.loading,
-        error: state.error
+        menu,
+        loading,
+        error,
     }
 }
 
-const mapDispacthToProps = {
-    menuLoaded,
-    menuRequested, 
-    addedToCart, 
-    menuError, 
-    getTotalPrice,
-    getCategories
-}
-
-
-export default withRouter(WithRestoService()(connect(mapStateToProps, mapDispacthToProps)(MenuList)));
+export default connect(mapStateToProps, {addedToCart, menuError, getTotalPrice, setDisable})(MenuList);

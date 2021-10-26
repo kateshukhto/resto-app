@@ -7,9 +7,10 @@
 			"category": "salads",
 			"img": "https://cdn-icons-png.flaticon.com/512/3831/3831114.png",
 			"description": "A Caesar salad is a green salad of romaine lettuce and croutons dressed with lemon juice, olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon mustard, Parmesan cheese, and black pepper.",
-			"amount": "1",
+			"amount": 1,
 			"id": 1,
-			"total": 12
+			"total": 12,
+			"disable": null
 		},
 		{
 			"title": "Pizza Margherita",
@@ -31,7 +32,8 @@
 			"description": "Pepperoni is an American variety of salami, made from cured pork and beef seasoned with paprika or other chili pepper. Pepperoni is characteristically soft, slightly smoky, and bright red in color.",
 			"amount": "1",
 			"id": 3,
-			"total": 13
+			"total": 13,
+			"disable": null
 		},
 		{
 			"title": "Greece salad",
@@ -42,7 +44,8 @@
 			"description": "Greek salad or horiatiki salad is a popular salad in Greek cuisine generally made with pieces of tomatoes, cucumbers, onion, feta cheese, and olives and dressed with salt, pepper, Greek oregano, and olive oil.",
 			"amount": "1",
 			"id": 4,
-			"total": 8
+			"total": 8,
+			"disable": null
 		},
 		{
 			"title": "Cowboy Steak",
@@ -53,7 +56,8 @@
 			"description": "A steak is a meat generally sliced across the muscle fibers, potentially including a bone. It is normally grilled, though can also be pan-fried.",
 			"amount": "1",
 			"id": 5,
-			"total": 25
+			"total": 25,
+			"disable": null
 		},
 		{
 			"title": "Lasagne",
@@ -64,7 +68,8 @@
 			"description": "Lasagne are a type of wide, flat pasta, possibly one of the oldest types of pasta. Lasagne, or the singular lasagna, is an Italian dish made of stacked layers of thin flat pasta alternating with fillings such as ragù and other vegetables, cheese, and seasonings and spices such as garlic, oregano and basil.",
 			"amount": "1",
 			"id": 6,
-			"total": 15
+			"total": 15,
+			"disable": null
 		},
 		{
 			"title": "Beef burger",
@@ -75,7 +80,8 @@
 			"description": "A hamburger is a food, typically considered a sandwich, consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.",
 			"amount": "1",
 			"id": 7,
-			"total": 10		
+			"total": 10,
+			"disable": null		
 		},
 		{
 			"title": "Risotto",
@@ -86,7 +92,8 @@
 			"description": "Risotto is a northern Italian rice dish cooked with broth until it reaches a creamy consistency. The broth can be derived from meat, fish, or vegetables. Many types of risotto contain butter, onion, white wine, and parmesan cheese.",
 			"amount": "1",
 			"id": 8,
-			"total": 12
+			"total": 12,
+			"disable": null
 		},
 		{
 			"title": "Tiramisu",
@@ -97,7 +104,8 @@
 			"description": "Tiramisu is a coffee-flavoured Italian dessert. It is made of ladyfingers dipped in coffee, layered with a whipped mixture of eggs, sugar, and mascarpone cheese, flavoured with cocoa.",
 			"amount": "1",
 			"id": 9,
-			"total": 9
+			"total": 9,
+			"disable": null
 		},
 		{
 			"title": "Cheesecake",
@@ -108,7 +116,8 @@
 			"description": "Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese, eggs, and sugar. If there is a bottom layer, it most often consists of a crust or base made from crushed cookies, graham crackers, pastry, or sometimes sponge cake.",
 			"amount": "1",
 			"id": 10,
-			"total": 11
+			"total": 11,
+			"disable": null
 		},
 		{
 			"title": "Pasteis de nata",
@@ -119,7 +128,8 @@
 			"description": "This pastéis de nata recipe makes as-close-to-authentic Portuguese custard tarts with a rich egg custard nestled in shatteringly crisp pastry.",
 			"amount": "1",
 			"id": 11,
-			"total": 5
+			"total": 5,
+			"disable": null
 		}, 
 		{
 			"title": "Cinnamon rolls",
@@ -130,7 +140,8 @@
 			"description": "A cinnamon roll is a sweet roll commonly served in Northern Europe and North America.",
 			"amount": "1",
 			"id": 12,
-			"total": 7
+			"total": 7,
+			"disable": null
 		},
 		{ "title": "BLT Pasta Salad",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/08/blt-pasta-salad-recipe.jpg",
@@ -140,7 +151,8 @@
 			"description": "This BLT pasta salad recipe is a fun twist on the classic sandwich. Packed with fresh veggies and avocado, it's a flavorful side dish or light lunch.",
 			"amount": "1",
 			"id": 13,
-			"total": 8
+			"total": 8,
+			"disable": null
 		},
 		{ "title": "Cherry Tomato Pasta",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/07/cherry-tomato-pasta-1.jpg",
@@ -150,7 +162,8 @@
 			"description": "This cherry tomato pasta is my ideal summer dinner. Filled with bursty tomatoes, garlic, and basil, it's fresh, flavorful, and super easy to make!",
 			"amount": "1",
 			"id": 14,
-			"total": 9
+			"total": 9,
+			"disable": null
 		},
 		{ "title": "Pesto Pasta Salad",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/07/pesto-pasta-salad-1-1.jpg",
@@ -160,7 +173,8 @@
 			"description": "Tossed with a vibrant basil pesto and filled with veggies, this pesto pasta salad is fresh and delicious. Serve it for dinner, or pack it up for a picnic!",
 			"amount": "1",
 			"id": 15,
-			"total": 9
+			"total": 9,
+			"disable": null
 		},
 		{ "title": "Air Fryer Eggplant",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/08/air-fryer-eggplant-1.jpg",
@@ -170,7 +184,8 @@
 			"description": "Coated in a panko and Parmesan crust, this air fryer eggplant is crispy on the outside, tender in the middle, and packed with rich, nutty flavor.",
 			"amount": "1",
 			"id": 16,
-			"total": 10
+			"total": 10,
+			"disable": null
 		},
 		{ "title": "Orzo Salad",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/05/orzo-salad-1.jpg",
@@ -180,7 +195,8 @@
 			"description": "This orzo salad recipe is perfect for summer picnics and cookouts! Feta cheese, olives, and a zingy Greek dressing fill it with bold flavor.",
 			"amount": "1",
 			"id": 17,
-			"total": 8
+			"total": 8,
+			"disable": null
 		}, 		
 		{ "title": "Pumpkin Bars",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2018/10/pumpkin-bars-recipe.jpg",
@@ -190,7 +206,8 @@
 			"description": "These easy pumpkin bars are super moist, perfectly spiced, and slathered in tangy cream cheese frosting.",
 			"amount": "1",
 			"id": 18,
-			"total": 7
+			"total": 7,
+			"disable": null
 		},		
 		{ "title": "Apple Cake",
 			"url": "https://cdn.loveandlemons.com/wp-content/uploads/2020/10/apple-cake-4.jpg",
@@ -200,7 +217,8 @@
 			"description": "This easy apple cake recipe is the perfect autumn treat! Moist, tender, and deliciously spiced, it's a wonderful dessert, breakfast, or afternoon snack.",
 			"amount": "1",
 			"id": 19,
-			"total": 9
+			"total": 9,
+			"disable": null
 		},
 		{
 			"title": "Portobello Mushroom Burger",
@@ -211,7 +229,8 @@
 			"description": "This portobello mushroom burger recipe will be a hit with vegetarians and meat eaters alike! It's juicy, meaty, and filled with rich, savory flavor.",
 			"amount": "1",
 			"id": 20,
-			"total": 9
+			"total": 9,
+			"disable": null
 		},
 		{
 			"title": "Cabbage Soup",
@@ -222,7 +241,8 @@
 			"description": "This cabbage soup recipe is deeply flavorful, thanks to aromatic veggies and fire-roasted tomatoes. Pair it with good bread for a simple, nourishing meal.",
 			"amount": "1",
 			"id": 21,
-			"total": 11
+			"total": 11,
+			"disable": null
 		},
 		{
 			"title": "Stuffed Peppers",
@@ -233,7 +253,8 @@
 			"description": "This easy stuffed peppers recipe is destined for your regular rotation! It's super simple, but the zesty rice filling makes it bold, fresh, and flavorful.",
 			"amount": "1",
 			"id": 22,
-			"total": 9
+			"total": 9,
+			"disable": null
 		}, 		
 		{
 			"title": "Ratatouille",
@@ -244,7 +265,8 @@
 			"description": "Bright, flavorful, and flecked with herbs, this ratatouille recipe showcases summer produce at its best. Enjoy it with your favorite rosé and good bread!",
 			"amount": "1",
 			"id": 23,
-			"total": 10
+			"total": 10,
+			"disable": null
 		}, 		
 		{
 			"title": "Cast Iron Skillet Pizza",
@@ -255,7 +277,8 @@
 			"description": "Try this cast iron pizza recipe once, and you'll never make pizza any other way! Thanks to the hot skillet, the crust is perfectly golden brown and crisp.",
 			"amount": "1",
 			"id": 24,
-			"total": 7
+			"total": 7,
+			"disable": null
 		},
 		{
 			"title": "Salmon with Green Beans and Smashed Potatoes",
@@ -266,7 +289,8 @@
 			"description": "Smart timing makes this sheet pan supper easy and keeps your dish count down. Briefly microwave the potatoes first to help them cook up perfectly tender with the salmon; add the green beans last to keep them bright and crunchy.",
 			"amount": "1",
 			"id": 25,
-			"total": 13
+			"total": 13,
+			"disable": null
 		},
 		{
 			"title": "Sheet Pan Lemony Chicken With Potatoes and Kale",
@@ -277,7 +301,8 @@
 			"description": "Try our Sheet Pan Lemony Chicken With Potatoes and Kale. Jarred sun-dried tomato pesto makes a great shortcut and adds loads of flavor without tacking on a ton of extra ingredients. The result is perfectly cooked chicken and potatoes and delicious kale with just the right amount of char. We used Stonewall Kitchen’s sun-dried tomato pesto, but feel free to use another brand. You can also rehydrate some dried tomatoes with warm water and olive oil, then run them through a mini food processor.",
 			"amount": "1",
 			"id": 26,
-			"total": 10
+			"total": 10,
+			"disable": null
 		}, 
 		{
 			"title": "Roasted Squash Salad",
@@ -288,7 +313,8 @@
 			"description": "Top winter greens with roasted butternut squash for a clean, light meal.",
 			"amount": "1",
 			"id": 27,
-			"total": 8
+			"total": 8,
+			"disable": null
 		}, 
 		{
 			"title": "Mexican Chorizo Burger",
@@ -299,7 +325,8 @@
 			"description": "With a fiery burger (courtesy of fresh Mexican chorizo blended with ground beef sirloin) and Serrano chile salsa, fresh avocado slices, and crumbles of cotija cheese help cool things down. Like a salsa-capped chorizo burger, this light, Mexican-style lager demands to be savored on a hot summer day.",
 			"amount": "1",
 			"id": 28,
-			"total": 6		
+			"total": 6,
+			"disable": null		
 		},
 		{
 			"title": "Classic Meat Loaf",
@@ -310,7 +337,8 @@
 			"description": "Combining three types of ground meat lends more depth to the overall flavor of this meat loaf recipe. Serve with roasted carrots and onions.",
 			"amount": "1",
 			"id": 29,
-			"total": 18
+			"total": 18,
+			"disable": null
 		}
 	]
 }

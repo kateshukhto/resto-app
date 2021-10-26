@@ -10,9 +10,9 @@ const AppHeader = ({totalPrice}) => {
     return (
         <nav className="nav">
         <MenuBurger/>
-
             <div className='link-wrapper'>
-                <Link to='/' className="nav__link" href="#">
+                <Link  to='/' 
+                className="nav__link" href="#"  >
                     Menu
                 </Link>
                 <Link to='/cart' className="nav__link" href="#">
@@ -26,7 +26,7 @@ const AppHeader = ({totalPrice}) => {
 
 const mapStateToProps = ({totalPrice}) => {
     return {
-        totalPrice, 
+        totalPrice
     }
 }
 

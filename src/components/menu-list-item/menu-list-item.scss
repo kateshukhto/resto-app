@@ -19,6 +19,7 @@
     &__item:hover {
         transform: scale(1.1);
     }
+
     &__title {
         font-size: 22px;
         margin-bottom: 20px;
@@ -33,10 +34,11 @@
     }
     &__category, &__price {
         font-size: 18px;
-        font-weight: 300;
+        font-weight: 700;
         margin-bottom: 10px;
         span {
-            font-weight: 700;
+            font-weight: 300;
+            text-transform: uppercase;
         }
     }
     &__btn {
@@ -48,8 +50,24 @@
         color: #fff;
         font-size: 16px;
         cursor: pointer;
+
+        &:hover {
+            background-color: #237736;
+        }
+        &:disabled{
+            background-color: grey;
+        }
     }
-    &__btn:hover {
-        background-color: #237736;
+
+}
+@media screen and (max-width: 998px) {
+    .menu__item:hover {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 869px) {
+    .menu__item {
+        margin-right: 0;
     }
 }

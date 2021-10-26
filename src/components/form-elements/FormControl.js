@@ -4,7 +4,7 @@ import Textarea from "./Textarea";
 import RadioButtons from "./RadioButton";
 import Checkbox from "./Checkbox";
 
-function FormikControl (props) {
+function FormControl (props) {
   const { control, ...rest } = props
   switch (control) {
     case 'input':
@@ -20,4 +20,4 @@ function FormikControl (props) {
   }
 }
 
-export default FormikControl;
+export default FormControl;

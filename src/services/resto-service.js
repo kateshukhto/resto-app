@@ -1,5 +1,5 @@
 export default class RestoService {
-  _baseUrl = 'https://restoapp2021.herokuapp.com/api';
+  _baseUrl = 'http://localhost:3000';
 
   async getMenuItems() {
     let response = await fetch(`${this._baseUrl}/menu`);

@@ -20,18 +20,18 @@
   &-list {
     margin-top: 40px;
     margin-left: 35px;
-    display: flex;
-    flex-direction: column;
   }
+
   &-wrap {
     text-transform: uppercase;
-    margin: 10px;
+    margin: 20px;
     list-style: none;
   }
 
   &-img {
     height: 30px;
-    margin-right: 10px;
+    margin-right: 20px;
+    vertical-align: middle;
   }
 
   &-link {
@@ -39,7 +39,8 @@
     text-decoration: none;
     font-size: 22px;
     font-weight: 500;
-    margin-top: 20px;
+    vertical-align: middle;
+    // margin-top: 20px;
     transition: all 0.2s ease;
   }
 

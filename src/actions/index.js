@@ -5,12 +5,6 @@ const menuLoaded = (newMenu) => {
   }
 }
 
-const menuRequested = () => {
-  return {
-    type: 'MENU_REQUESTED',
-  }
-}
-
 const menuError = () => {
   return {
     type: 'MENU_ERROR',
@@ -55,13 +49,6 @@ const dcrAmount = (id) => {
   }
 }
 
-const getPriceOCertainItem = (id) => {
-  return {
-    type: 'GET__PRICE__OF__CERTAIN__ITEM',
-    id
-  }
-}
-
 const setModal = (isOpenModal) => {
   return {
     type: 'SET__MODAL',
@@ -83,10 +70,23 @@ const setLoading = (loading) => {
   }
 }
 
+const setItems = (items) => {
+  return {
+    type: 'SET__ITEMS',
+    items
+  }
+}
+
+const setDisable = (id, value) => {
+  return {
+    type: 'SET__DISABLE',
+    id, 
+    value
+  }
+}
 
 export {
   menuLoaded,
-  menuRequested,
   menuError,
   addedToCart,
   deleteFromCart, 
@@ -94,8 +94,9 @@ export {
   getCategories,
   incAmount, 
   dcrAmount,
-  getPriceOCertainItem,
   setModal,
   setOrdered,
-  setLoading
+  setLoading,
+  setItems, 
+  setDisable
 }

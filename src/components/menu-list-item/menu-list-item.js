@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './menu-list-item.scss';
 
 const MenuListItem = ({menuItem, onAddToCart}) => {
-    const { title, price, url, category, id } = menuItem;
+    const { title, price, url, category, id, disable } = menuItem;
     return (
         <li className="menu__item">
             <Link to={`/dish/${id}`} className='menu__link'>
@@ -12,7 +12,9 @@ const MenuListItem = ({menuItem, onAddToCart}) => {
                 <div className="menu__category">Category: <span>{category}</span></div>
                 <div className="menu__price">Price: <span>{price}$</span></div>
             </Link>
-            <button onClick={() => onAddToCart()} className="menu__btn">Add to cart</button>
+            <button disabled={disable} onClick={() => {
+                onAddToCart()
+            }} className="menu__btn">Add to cart</button>
         </li>
     )
 }

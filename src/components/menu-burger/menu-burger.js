@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { Link } from "react-router-dom";
 import './menu-burger.scss'
 
-const MenuBurger = ({categories }) => {
+const MenuBurger = ({categories}) => {
 
   const[isOpen, setIsOpen] = useState(false);
 
@@ -46,7 +46,7 @@ const MenuBurger = ({categories }) => {
 
 const mapStateToProps = ({categories}) => {
   return {
-    categories, 
+    categories
   }
 }
 

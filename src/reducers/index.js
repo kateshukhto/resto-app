@@ -10,6 +10,13 @@ const initialState = {
 }
 
 const reducers = (state = initialState, action) => {
+  const deleteItem = (id) => {
+    const itemIndex = state.items.findIndex(item => item.id === id);
+    return [
+        ...state.items.slice(0, itemIndex),
+        ...state.items.slice(itemIndex + 1)
+    ]
+  }
   switch (action.type) {
     case 'MENU_LOADED':
       return {
@@ -34,67 +41,48 @@ const reducers = (state = initialState, action) => {
       )
       }
     };
-
-    case 'MENU_REQUESTED':
-      return {
-          ...state,
-          menu: state.menu,
-          loading: true,
-          error: false
-      };
+      
     case 'MENU_ERROR':
       return {
             ...state,
-            menu: state.menu,
-            loading: true,
+            loading: false,
             error: true
         };
 
     case 'ITEM_ADD_TO_CART':
-      const id = action.payload;
-      const reapeatItems = state.items.findIndex(item => item.id === id);
-      if(reapeatItems >= 0) {
-        const itemInState = state.items.find(item => item.id === id);
-        const newItem = {
-          ...itemInState,
-          amount: ++itemInState.amount
-        }
+      {
+        const id = action.payload;
+
+        const item = state.menu.find(item => item.id === id);
+        const addedItem = {
+          ...item,
+          total: item.amount * item.price
+        };
+
+        const newItems = [
+          ...state.items,
+          addedItem
+        ]
+  
+        sessionStorage.setItem("items", JSON.stringify(newItems))
+  
         return {
           ...state,
-          ...state.items.slice(0, reapeatItems),
-          newItem,
-          ...state.items.slice(reapeatItems + 1)
+          items: newItems
         }
       }
-      const item = state.menu.find(item => item.id === id);
-      const newItem = {
-        title: item.title,
-        url: item.url,
-        price: item.price,
-        amount: item.amount,
-        id: item.id,
-        total: item.total
-      };
 
-      return {
-        ...state,
-        items: [
-          ...state.items,
-          newItem
-        ]
-      }
       
     case 'DELETE_FROM_CART':
-      const ind = action.id;
-      const itemIndex = state.items.findIndex(item => item.id === ind);
-
-
-      return {
-        ...state,
-        items: [
-          ...state.items.slice(0, itemIndex),
-          ...state.items.slice(itemIndex + 1)
-        ]
+      {
+       const newItems = deleteItem(action.id)
+      
+        sessionStorage.setItem("items", JSON.stringify(newItems))
+  
+        return {
+          ...state,
+          items: newItems
+        }
       }
 
     case 'GET_TOTAL_PRICE':
@@ -105,87 +93,129 @@ const reducers = (state = initialState, action) => {
     }
 
     case 'INC__AMOUNT': 
-
-    const CInd = state.items.findIndex(i => i.id === action.id)
-    const CItem = state.items.find(i => i.id === action.id);
-    const changeItem = {
-      ...CItem, 
-      amount: ++CItem.amount,
-    }
-
-    return {
-      ...state,
-      items: [
-        ...state.items.slice(0, CInd),
-        changeItem,
-        ...state.items.slice(CInd + 1)
-      ]
-    }
-
-    case 'DCR__AMOUNT': 
-
-    function isPositive(n){
-      if(n > 0) {
-        return --n
-      } else {
-        return 0
-      }
-    }
-
-    const DInd = state.items.findIndex(i => i.id === action.id)
-    const DItem = state.items.find(i => i.id === action.id);
-    const DchangeItem = {
-      ...DItem, 
-      amount: isPositive(DItem.amount) 
-    }
-
-    return {
-      ...state,
-      items: [
-        ...state.items.slice(0, DInd),
-        DchangeItem,
-        ...state.items.slice(DInd + 1)
-      ]
-    }
-
-    case 'GET__PRICE__OF__CERTAIN__ITEM': {
-
-      const ind = state.items.findIndex(i => i.id === action.id)
+    {
+      const index = state.items.findIndex(i => i.id === action.id)
       const item = state.items.find(i => i.id === action.id);
       const changeItem = {
         ...item, 
+        amount: ++item.amount,
         total: item.amount * item.price
       }
+      const newItems = [
+        ...state.items.slice(0, index),
+        changeItem,
+        ...state.items.slice(index + 1)
+      ]
   
+      sessionStorage.setItem("items", JSON.stringify(newItems))
+
       return {
         ...state,
-        items: [
-          ...state.items.slice(0, ind),
-          changeItem,
-          ...state.items.slice(ind + 1)
-        ]
+        items: newItems
+      }
+    }
+
+    case 'DCR__AMOUNT': 
+    {
+      function isZero(n){
+        if(n > 0) {
+          return --n
+        } else {
+          return 0
+        }
+      }
+
+      function getSum(amount, price) {
+        if(amount === 0) {
+          return 0 
+        } else {
+          return (amount - 1) * price
+        }
+      }
+  
+      const index = state.items.findIndex(i => i.id === action.id)
+      const item = state.items.find(i => i.id === action.id);
+
+      const changeItem = {
+        ...item, 
+        amount: isZero(item.amount) ,
+        total: getSum(item.amount, item.price)
+      }
+      const newItems = [
+        ...state.items.slice(0, index),
+        changeItem,
+        ...state.items.slice(index + 1)
+      ]
+        
+      sessionStorage.setItem("items", JSON.stringify(newItems))
+    
+      return {
+        ...state,
+        items: newItems
       }
     }
 
     case 'SET__MODAL': 
     return {
       ...state,
-      isOpenModal: action.isOpenModal
+      isOpenModal: action.isOpenModal,
+      isOrdered: null
     }
 
     case 'SET__ORDERED': 
-    return {
+    {
+      sessionStorage.removeItem("items")
+
+      const newMenu = state.menu.map(item => {
+        return {
+          ...item,
+          disable: false
+        }
+      })
+      
+      return {
       ...state,
+      menu: newMenu,
       items: [],
       loading: false,
       isOrdered: action.isOrdered,
       totalPrice: 0
+    }
     }
 
     case 'SET__LOADING': 
     return {
       ...state,
       loading: action.loading
+    }
+
+    case 'SET__ITEMS': 
+    return {
+      ...state,
+      loading: false,
+      items: action.items
+    }
+
+    case 'SET__DISABLE': 
+      {
+      const index = state.menu.findIndex(i => i.id === action.id)
+      const item = state.menu.find(i => i.id === action.id);
+      const changeItem = {
+        ...item, 
+        disable: action.value
+      }
+      const newItems = [
+        ...state.menu.slice(0, index),
+        changeItem,
+        ...state.menu.slice(index + 1)
+      ]
+      
+      sessionStorage.setItem("menuItems", JSON.stringify(newItems))
+  
+      return {
+        ...state,
+        menu: newItems
+      }
     }
 
     default:
