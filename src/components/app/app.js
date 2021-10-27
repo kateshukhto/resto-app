@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import {MainPage, CartPage, DishPage} from '../pages/index';
+import {MainPage, CartPage, DishPage, FormPage} from '../pages/index';
 import AppHeader from '../app-header';
 import { Route, Switch} from 'react-router-dom';
-import FormContainer from '../form/formContainer';
 import { connect } from 'react-redux';
 import WithRestoService from '../hoc';
 import { menuLoaded, setLoading, menuError, getTotalPrice, getCategories, setItems } from '../../actions';
@@ -40,7 +39,7 @@ class App extends Component {
              <AppHeader/>
              <Switch>
                  <Route exact path='/cart' component={CartPage}/>
-                 <Route exact path='/form' component={FormContainer}/>
+                 <Route exact path='/form' component={FormPage}/>
                  <Route exact path='/:i?' component={MainPage}/>
                  <Route exact path='/dish/:id?' component={DishPage}/>
              </Switch>

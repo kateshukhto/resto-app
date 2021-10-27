@@ -99,7 +99,7 @@ const FormContainer = withRouter(({ history, ...props}) => {
 
 const mapStateToProps = ({totalPrice}) => {
   return {
-    totalPrice,
+    totalPrice
   }
 }
 
