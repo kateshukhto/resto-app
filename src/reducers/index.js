@@ -26,7 +26,7 @@ const reducers = (state = initialState, action) => {
           error: false
       };
 
-    case 'GET_CATEGORIES': {
+    case 'GET_CATEGORIES': 
       return {
         ...state,
         categories: state.menu.map(i => {
@@ -39,8 +39,7 @@ const reducers = (state = initialState, action) => {
           t.category === el.category && t.img === el.img
         ))
       )
-      }
-    };
+      };
       
     case 'MENU_ERROR':
       return {
@@ -164,22 +163,26 @@ const reducers = (state = initialState, action) => {
 
     case 'SET__ORDERED': 
     {
-      sessionStorage.removeItem("items")
+      let newMenu
 
-      const newMenu = state.menu.map(item => {
-        return {
-          ...item,
-          disable: false
-        }
-      })
+      if(action.items) {
+        sessionStorage.removeItem("items")
+        newMenu = state.menu.map(item => {
+          return {
+            ...item,
+            disable: false
+          }
+        })
+        sessionStorage.setItem("menuItems", JSON.stringify(newMenu))
+      }
       
       return {
       ...state,
-      menu: newMenu,
-      items: [],
+      menu: newMenu ? newMenu : state.menu,
+      items: action.items ? [] : state.items,
       loading: false,
       isOrdered: action.isOrdered,
-      totalPrice: 0
+      totalPrice: action.items ? 0 : state.totalPrice
     }
     }
 

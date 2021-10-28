@@ -1,7 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { menuLoaded, addedToCart, menuError, getTotalPrice, setDisable } from '../../actions';
+import { withRouter } from 'react-router-dom';
 import './dish-item.scss'
 
-const DishItem = ({item, onAddToCart, goBack}) => {
+const DishItem = withRouter(({match, history, ...props}) => {
+    const {menu, addedToCart, getTotalPrice, setDisable} = props;
+
+    const itemId = match.params.id;
+
+    const item = menu.find(item => +item.id === +itemId);
+
+
     const { title, price, url, category, description, id, disable} = item;
 
     return (
@@ -14,18 +24,26 @@ const DishItem = ({item, onAddToCart, goBack}) => {
                 <div className="menu__price">Price: <span>{price} $</span></div>
                 <div className='dish__descr'>{description}</div>
                 <button disabled={disable} onClick={() => {
-                    onAddToCart()
+                    addedToCart(id)
+                    getTotalPrice()
+                    setDisable(id, true)
                 }} className="menu__btn">Add to cart</button>  
             </div>
                 <div 
-                onClick={() => {goBack()}}
+                onClick={() => history.goBack()}
                 className='dish__close'
                 >&times;</div>
             </div>
         </div>
     )
     
-};
+});
 
 
-export default (DishItem);
+const mapStateToProps = ({menu}) => {
+    return {
+        menu
+    }
+}
+
+export default connect(mapStateToProps, {menuLoaded, addedToCart, menuError, setDisable, getTotalPrice})(DishItem);

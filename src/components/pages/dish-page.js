@@ -1,10 +1,10 @@
 import React from 'react';
-import DishItemContainer from '../dish-item-container/dish-item-container';
+import DishItem from '../dish-item';
 
 const DishPage = () => {
     return (
         <div className="cart">
-            <DishItemContainer/> 
+            <DishItem/> 
         </div>
     )
 }

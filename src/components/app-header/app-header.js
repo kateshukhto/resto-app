@@ -3,7 +3,7 @@ import cartIcon from './shopping-cart-solid.svg';
 import './app-header.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import MenuBurger from '../menu-burger/menu-burger';
+import MenuBurger from '../menu-burger';
 
 const AppHeader = ({totalPrice}) => {
 

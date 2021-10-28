@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import FormItem from './form';
+import FormItem from './formItem';
 import emailjs from 'emailjs-com';
 import {connect} from 'react-redux';
 import {setOrdered, setLoading, setModal} from '../../actions';
@@ -26,7 +26,11 @@ const FormContainer = withRouter(({ history, ...props}) => {
     setOrdered(null)
     setModal(false)
   }
- }, [])
+ }, []);
+
+ const goToMainPage = () => {
+   history.push('/')
+ }
 
   const initialValues= {
     name: '',
@@ -60,7 +64,7 @@ const FormContainer = withRouter(({ history, ...props}) => {
     emailjs.send('service_72acdwd', 'template_7pkuwso', 
     object, 'user_mWvy3foL57qSa8IZwXNAe')
     .then(() => { 
-      setOrdered(true)
+      setOrdered(true, true)
     })
     .catch(() => {
       setOrdered(false)
@@ -90,7 +94,7 @@ const FormContainer = withRouter(({ history, ...props}) => {
         )
       } 
     </Formik>
-      <Modal>
+      <Modal goToMainPage={goToMainPage}>
         <ModalInner/>
       </Modal>
     </>

@@ -1,11 +1,11 @@
 import React from 'react';
-import FormContainer from '../form/formContainer'
+import FormContainer from '../form'
 
 const FormPage = () => {
     return (
-        <div className="cart">
+        <>
             <FormContainer/>
-        </div>
+        </>
     )
 }
 

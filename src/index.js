@@ -17,10 +17,11 @@ ReactDOM.render(
     <Provider store={store}>
         <ErrorBoundry>
             <RestoServiceContext.Provider value={restoService}>
-                <Router>
-                    <ScrollToTop>
-                        <App/>
-                    </ScrollToTop>
+                <Router >
+                    <ScrollToTop/>
+                    <App/>
+
+                    {/* </ScrollToTop> */}
                 </Router>
             </RestoServiceContext.Provider>
         </ErrorBoundry>

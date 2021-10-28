@@ -56,10 +56,11 @@ const setModal = (isOpenModal) => {
   }
 }
 
-const setOrdered = (isOrdered) => {
+const setOrdered = (isOrdered, items = false) => {
   return {
     type: 'SET__ORDERED',
-    isOrdered
+    isOrdered, 
+    items
   }
 }
 

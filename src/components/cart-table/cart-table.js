@@ -1,15 +1,20 @@
 import React from 'react';
 import './cart-table.scss';
 import Spinner from '../spinner';
+import Error from '../error';
 import { connect } from 'react-redux';
 import { deleteFromCart, getTotalPrice, incAmount, dcrAmount, setDisable } from '../../actions';
 import { Link } from 'react-router-dom';
 
 const CartTable = ( {items, deleteFromCart, getTotalPrice, setDisable,
-    incAmount, dcrAmount, loading }) => {
+    incAmount, dcrAmount, loading, error}) => {
 
     if(loading) {
         return <Spinner/>
+    }
+
+    if(error) {
+        return <Error/>
     }
 
     return (
@@ -58,10 +63,11 @@ const CartTable = ( {items, deleteFromCart, getTotalPrice, setDisable,
     );
 };
 
-const mapStateToProps = ({items, loading}) => {
+const mapStateToProps = ({items, loading, error}) => {
     return {
         items,
-        loading
+        loading,
+        error
     }
 }
 
