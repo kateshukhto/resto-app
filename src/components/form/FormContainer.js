@@ -103,4 +103,4 @@ const mapStateToProps = ({totalPrice}) => {
   }
 }
 
-export default connect(mapStateToProps, { setOrdered, setLoading, setModal})(FormContainer);
+export default connect(mapStateToProps, {setOrdered, setLoading, setModal})(FormContainer);
