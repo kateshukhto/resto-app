@@ -1,5 +1,5 @@
 export default class RestoService {
-  _baseUrl = 'http://localhost:3000';
+  _baseUrl = 'http://localhost:3001';
 
   async getMenuItems() {
     let response = await fetch(`${this._baseUrl}/menu`);
